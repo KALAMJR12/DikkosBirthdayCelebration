@@ -86,31 +86,31 @@
     <p class="form-intro">Send your warm wishes 🎉</p>
     
     <!-- Netlify-enabled form -->
-    <form id="wishForm" name="wishForm" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="wish-form">
-      <!-- Hidden honeypot input -->
-      <input type="hidden" name="form-name" value="wishForm">
-      <p class="hidden">
-        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-      </p>
+   <form name="wish-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="wish-form">
+  <input type="hidden" name="form-name" value="wish-form">
+  <p class="hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
 
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input id="name" name="name" type="text" required placeholder="Enter your name">
-      </div>
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input id="name" name="name" type="text" required />
+  </div>
 
-      <div class="form-group">
-        <label for="message">Your Wish</label>
-        <textarea id="message" name="message" required placeholder="Write your birthday wish..."></textarea>
-      </div>
+  <div class="form-group">
+    <label for="message">Your Wish</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
 
-      <button type="submit" class="submit-btn">Send Wish</button>
-    </form>
+  <button type="submit" class="submit-btn">Send Wish</button>
+</form>
 
-    <div id="successMessage" class="success-message">
-      <div class="success-icon">✔</div>
-      <h3>Wish Sent!</h3>
-      <p>Thank you for sharing your love 💕</p>
-    </div>
+<div id="success-message" class="success-message">
+  <div class="success-icon">✔</div>
+  <h3>Wish Sent!</h3>
+  <p>Thank you for sharing your love 💕</p>
+</div>
+
   </div>
 </section>
 
