@@ -81,24 +81,46 @@
         </div>
     </section>
 
-    <section class="wishes-form">
-        <div class="container">
-            <div class="form-container">
-                <h2 class="section-title">Send Your Birthday Wishes 🎁</h2>
-                <p class="form-intro">Share your heartfelt message and make her day even more special!</p>
-                
-             <form name="wish-form" class="wish-form" netlify>
-      <input type="hidden" name="form-name" value="wish-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <textarea name="message" rows="4" placeholder="Your Birthday Wish" required></textarea>
-      <button type="submit">Send Wish</button>
+  <section class="wishes-form">
+  <div class="container form-container">
+    <p class="form-intro">
+      Leave a special birthday wish 🎉 — it’ll appear below after submission!
+    </p>
+
+    <!-- Wish Form -->
+    <form id="wishForm" class="wish-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Birthday Wish</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write something sweet..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Wish 💖</button>
     </form>
 
-    <div id="success-message">🎉 Thank you for your wish! 🎉</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+      <div class="success-icon">✓</div>
+      <h3>Wish Sent Successfully!</h3>
+      <p>Thank you for spreading the joy 🎂</p>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">
         <div class="container">
