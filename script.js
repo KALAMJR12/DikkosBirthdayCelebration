@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("wishForm");
   const successMessage = document.getElementById("successMessage");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Get values
     const name = document.getElementById("name").value.trim();
     const message = document.getElementById("message").value.trim();
 
@@ -14,18 +13,31 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // (Optional) You could send this data to a backend or localStorage
-    console.log("Wish submitted:", { name, message });
+    // Prepare form data for Netlify
+    const formData = new FormData(form);
 
-    // Show success animation
-    successMessage.classList.add("show");
+    try {
+      // Send form data to Netlify
+      const response = await fetch("/", {
+        method: "POST",
+        body: formData,
+      });
 
-    // Reset form
-    form.reset();
+      if (response.ok) {
+        // Success animation
+        successMessage.classList.add("show");
+        form.reset();
 
-    // Hide success message after few seconds
-    setTimeout(() => {
-      successMessage.classList.remove("show");
-    }, 4000);
+        // Hide success message after few seconds
+        setTimeout(() => {
+          successMessage.classList.remove("show");
+        }, 4000);
+      } else {
+        alert("Something went wrong. Please try again!");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Error submitting form. Check your connection.");
+    }
   });
 });
