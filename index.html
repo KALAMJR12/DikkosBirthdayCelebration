@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉 | Dikkos Pastries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Dikkos Pastries</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="birthday-badge">🎉 November 5th, 2025 🎉</div>
+                <h1 class="hero-title">
+                    Happy Birthday! 🎊
+                </h1>
+                <p class="hero-subtitle">Celebrating an Amazing Woman</p>
+            </div>
+            
+            <div class="hero-image-container">
+                <div class="image-frame">
+                    <img src="images/birthday-girl.jpg" alt="Birthday Celebration" class="hero-image" id="hero-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="celebration">
+        <div class="container">
+            <div class="celebration-card">
+                <div class="celebration-icon">🎓</div>
+                <h2>Congratulations on Your Graduation!</h2>
+                <p>What an incredible achievement! Your hard work and dedication have paid off, and we couldn't be more proud of you. This is just the beginning of an amazing journey!</p>
+            </div>
+            
+            <div class="celebration-card">
+                <div class="celebration-icon">🧁</div>
+                <h2>Dikkos Pastries - A Sweet Success</h2>
+                <p>You've turned your passion into a beautiful business! Dikkos Pastries is bringing joy to so many people with your delicious creations. Here's to your continued success and all the sweet moments ahead!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishes-display">
+        <div class="container">
+            <h2 class="section-title">Birthday Wishes 💝</h2>
+            <div class="wishes-grid">
+                <div class="wish-card">
+                    <div class="wish-icon">🌟</div>
+                    <p class="wish-text">"Wishing you a day filled with love, laughter, and all your favorite things! May this year bring you endless joy and success!"</p>
+                    <div class="wish-author">- Your Friends</div>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">💖</div>
+                    <p class="wish-text">"Happy Birthday to an incredible entrepreneur! May Dikkos Pastries continue to flourish and bring sweetness to the world!"</p>
+                    <div class="wish-author">- Well Wishers</div>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">🎈</div>
+                    <p class="wish-text">"Congratulations on your graduation and happy birthday! You're destined for greatness. Keep shining bright!"</p>
+                    <div class="wish-author">- Your Supporters</div>
+                </div>
+                
+                <div class="wish-card">
+                    <div class="wish-icon">✨</div>
+                    <p class="wish-text">"May your special day be as sweet as the pastries you create! Here's to another year of blessings and beautiful memories!"</p>
+                    <div class="wish-author">- With Love</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishes-form">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="section-title">Send Your Birthday Wishes 🎁</h2>
+                <p class="form-intro">Share your heartfelt message and make her day even more special!</p>
+                
+                <form name="birthday-wishes" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="wish-form">
+                    <input type="hidden" name="form-name" value="birthday-wishes">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email (optional)</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Birthday Wish *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="Write your heartfelt birthday message here..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Birthday Wishes 🎉</span>
+                    </button>
+                </form>
+                
+                <div class="success-message" id="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank You!</h3>
+                    <p>Your birthday wishes have been sent successfully! 🎊</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made with 💝 for a Special Birthday Celebration</p>
+            <p class="footer-tagline">✨ Dikkos Pastries - Sweetening Life, One Treat at a Time ✨</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
